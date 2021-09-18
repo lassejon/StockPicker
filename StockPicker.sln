@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockPicker", "StockPicker\StockPicker.csproj", "{147FBC28-6A35-4957-9E3F-1E80154990D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{147FBC28-6A35-4957-9E3F-1E80154990D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147FBC28-6A35-4957-9E3F-1E80154990D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147FBC28-6A35-4957-9E3F-1E80154990D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147FBC28-6A35-4957-9E3F-1E80154990D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
