@@ -8,11 +8,41 @@ namespace StockPicker
         static void Main(string[] args)
         {
             var test = new List<int> {17, 3, 6, 9, 15, 8, 6, 1, 10};
-            PickStocks(test).ForEach(Console.WriteLine);
-            Console.WriteLine(PickStocks(test).ToString());
+            foreach (var pickStock in PickStocks(test))
+            {
+                Console.WriteLine(pickStock);
+            }
         }
 
-        static List<int> PickStocks(List<int> stocks)
+        static int[] PickStocks(List<int> stocks)
+        {
+            int maxDifference = Int32.MinValue;
+            int minStock = Int32.MaxValue;
+            int minIndex = 0;
+            int[] result = new int[2];
+
+            for (int i = 0; i < stocks.Count; i++)
+            {
+                int stock = stocks[i];
+                
+                if (stock < minStock)
+                {
+                    minStock = stock;
+                    minIndex = i;
+                }
+
+                int difference = stock - minStock;
+                if (difference > maxDifference)
+                {
+                    maxDifference = difference;
+                    result[0] = minIndex;
+                    result[1] = i;
+                }
+            }
+            return result;
+        }
+
+        static List<int> PickStocksNaive(List<int> stocks)
         {
             int maxDifference = Int32.MinValue;
             int minIndex = 0;
